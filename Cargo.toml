@@ -1,0 +1,30 @@
+[package]
+name = "mr_fresh"
+version = "0.1.0"
+edition = "2021"
+description = "Mr. Fresh (FRESH) - A playful cat-themed Solana token"
+authors = ["PV"]
+
+[features]
+no-entrypoint = []
+test-sbf = []
+
+[dependencies]
+solana-program = "2.1.4"
+borsh = { version = "1.5.3", features = ["derive"] }
+thiserror = "2.0.4"
+num-derive = "0.4"
+num-traits = "0.2"
+
+[dev-dependencies]
+solana-program-test = "2.1.4"
+solana-sdk = "2.1.4"
+tokio = { version = "1.42.0", features = ["full", "rt", "rt-multi-thread", "macros"] }
+tokio-test = "0.4"
+
+[lib]
+name = "mr_fresh"
+crate-type = ["cdylib", "lib"]
+
+[workspace]
+members = ["."]
